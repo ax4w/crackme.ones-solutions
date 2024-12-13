@@ -1,3 +1,5 @@
+https://crackmes.one/crackme/659fde9deef082e477ff59ba
+
 we can look into the code and inspect how check_all works.
 check_all calls check_len of our input,where we return true if the input.length % 4 == 0
 so we know that we need a by 4 divisble password. the second function is check_palindrome_every_four

@@ -1,3 +1,5 @@
+https://crackmes.one/crackme/61c8deff33c5d413767ca0ea
+
 i disassembled the executable using ghidra and reimplemented the key generation algorithm and all needed data:
 
   local_c3[0] = 0x34;
