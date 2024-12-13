@@ -1,0 +1,23 @@
+I used ghidra to disassemble the executable and went ahead and implemented the generate_password method generate the needed password.
+The code for that is:
+
+#include <stdio.h>
+#include <string.h>
+
+void generate_password(char *targert, char* key) {
+    size_t size = strlen(key);
+    for(int i = 0; i < size; i++) {
+        targert[i] = key[i] + '\x03';
+    }
+    targert[size] = 0;
+    return;
+}
+
+int main() {
+    char key[56];
+    generate_password(key, "sexy1337");
+    printf("%s",key);
+    return 0;
+}
+
+and the final password was: vh{|466:
