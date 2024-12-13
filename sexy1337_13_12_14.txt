@@ -1,3 +1,5 @@
+https://crackmes.one/crackme/6715466c9b533b4c22bd18bb
+
 I used ghidra to disassemble the executable and went ahead and implemented the generate_password method generate the needed password.
 The code for that is:
 
