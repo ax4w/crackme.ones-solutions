@@ -1,7 +1,7 @@
 https://crackmes.one/crackme/61c8deff33c5d413767ca0ea
 
 i disassembled the executable using ghidra and reimplemented the key generation algorithm and all needed data:
-
+```c
   local_c3[0] = 0x34;
   local_c3[1] = 0x40;
   local_c3[2] = 0x73;
@@ -19,7 +19,7 @@ i disassembled the executable using ghidra and reimplemented the key generation 
     sprintf(local_78 + local_cc,"%02x",(ulong)local_c3[i]);
     local_cc = local_cc + 2;
   }
-
+```
 it basiaclly takes the entries of s and converts to a char* and adds them to the key at the offset cc.
 the loop could totally be avoided if one would just translate the hex numbers.
 
@@ -27,6 +27,7 @@ an interessting observation is, that the input is stored directly after the entr
 
 i used that c-code to generate the key:
 
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -46,5 +47,5 @@ int main() {
     generateKey();
     return 0;
 }
-
+```
 key is: 34407373373234353336

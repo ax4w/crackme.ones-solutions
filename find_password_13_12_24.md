@@ -10,6 +10,7 @@ We can then pass the static string from the disassembled executable into that re
 need to provide to get back to the hardcoded string after the input is processed in the original encrypt method.
 
 Implementation:
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -34,5 +35,5 @@ int main() {
     generateKey();
     return 0;
 }
-
+```
 The password is: CTF{Gh1Dr4-4nD-5Tr4C3-15-H31L}
